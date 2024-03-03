@@ -1,5 +1,5 @@
 import React from "react";
-import { NotificationType } from "../models/Notification";
+import { NotificationType } from "../../models/Notification";
 
 interface NotificationComponentProps {
 	notification: NotificationType;
@@ -10,7 +10,7 @@ export const NotificationComponent: React.FC<NotificationComponentProps> = ({ no
 	return (
 		<div className="notification-container">
 			{notification.visible && (
-				<div className={notification.visible ? "notification-wrapper success" : "notification-wrapper failure"}>
+				<div className="notification-wrapper success">
 					<span>{notification.text}</span>
 					<div onClick={() => setNotification({ type: "success", text: "", visible: false })}>X</div>
 				</div>

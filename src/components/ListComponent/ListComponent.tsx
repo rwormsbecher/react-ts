@@ -1,6 +1,6 @@
 import React from "react";
-import ListItemComponent from "./ListItemComponent";
-import { City } from "../models/City";
+import { ListItemComponent } from "../ListItemComponent/ListItemComponent";
+import { City } from "../../models/City";
 
 interface ListComponentProps {
 	cities: City[];

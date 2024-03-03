@@ -1,11 +1,11 @@
 import { useState } from "react";
 
 import { NotificationType } from "./models/Notification";
-import { NotificationComponent } from "./components/NotificationComponent";
-import { HeaderComponent } from "./components/HeaderComponent";
+import { NotificationComponent } from "./components/NotificationComponent/NotificationComponent";
+import { HeaderComponent } from "./components/HeaderComponent/HeaderComponent";
 import { Route, Routes } from "react-router-dom";
-import { HomePage } from "./pages/HomePage";
-import { AddCityPage } from "./pages/AddCityPage";
+import { HomePage } from "./pages/HomePage/HomePage";
+import { AddCityPage } from "./pages/AddCityPage/AddCityPage";
 import { useFetchCities } from "./useFetchCities";
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
 	if (error) return <div className="App">Error: {error}</div>;
 
 	return (
-		<>
+		<div>
 			<HeaderComponent></HeaderComponent>
 			<NotificationComponent setNotification={setNotification} notification={notification} />
 			<div className="App">
@@ -34,7 +34,7 @@ function App() {
 					/>
 				</Routes>
 			</div>
-		</>
+		</div>
 	);
 }
 
