@@ -21,7 +21,6 @@ describe("ShowcaseComponent", () => {
 		render(<ShowcaseComponent activeCity={mockCity} />);
 		const img = screen.getByRole("img", { name: mockCity.cityName });
 
-		screen.logTestingPlaygroundURL();
 		expect(img).toHaveAttribute("src");
 		expect(img).toHaveAttribute("alt", mockCity.cityName);
 	});

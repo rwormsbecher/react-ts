@@ -34,7 +34,6 @@ describe("ListComponent", () => {
 
 	it("renders a list item for each city", () => {
 		render(<ListComponent cities={mockCities} activeCity={mockActiveCity} setActiveCity={mockSetActiveCity} />);
-		screen.logTestingPlaygroundURL();
 
 		const listItems = screen.getAllByTestId("mock-list-item");
 		expect(listItems).toHaveLength(mockCities.length);
