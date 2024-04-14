@@ -1,11 +1,11 @@
 import React from "react";
-import Amsterdam from "../assets/images/amsterdam.jpg";
-import Shenzhen from "../assets/images/shenzhen.jpg";
-import London from "../assets/images/london.jpg";
-import Mumbai from "../assets/images/mumbai.jpg";
-import Sacramento from "../assets/images/sacramento.jpg";
-import Nieuwegein from "../assets/images/nieuwegein.jpg";
-import { City } from "../models/City";
+import Amsterdam from "../../assets/images/amsterdam.jpg";
+import Shenzhen from "../../assets/images/shenzhen.jpg";
+import London from "../../assets/images/london.jpg";
+import Mumbai from "../../assets/images/mumbai.jpg";
+import Sacramento from "../../assets/images/sacramento.jpg";
+import Nieuwegein from "../../assets/images/nieuwegein.jpg";
+import { City } from "../../models/City";
 
 interface ShowcaseComponentProps {
 	activeCity: City;

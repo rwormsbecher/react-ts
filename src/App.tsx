@@ -1,11 +1,11 @@
 import { useState } from "react";
 
 import { NotificationType } from "./models/Notification";
-import { NotificationComponent } from "./components/NotificationComponent";
-import { HeaderComponent } from "./components/HeaderComponent";
+import { NotificationComponent } from "./components/notificationComponent/NotificationComponent";
+import { HeaderComponent } from "./components/headerComponent/HeaderComponent";
 import { Route, Routes } from "react-router-dom";
-import { HomePage } from "./pages/HomePage";
-import { AddCityPage } from "./pages/AddCityPage";
+import { HomePage } from "./pages/homePage/HomePage";
+import { AddCityPage } from "./pages/addCityPage/AddCityPage";
 import { useFetchCities } from "./useFetchCities";
 
 function App() {
@@ -22,16 +22,8 @@ function App() {
 			<NotificationComponent setNotification={setNotification} notification={notification} />
 			<div className="App">
 				<Routes>
-					<Route
-						path="/"
-						element={<HomePage cities={cities} activeCity={activeCity} setActiveCity={setActiveCity} />}
-					/>
-					<Route
-						path="/add"
-						element={
-							<AddCityPage setCities={setCities} setNotification={setNotification} cities={cities} />
-						}
-					/>
+					<Route path="/" element={<HomePage cities={cities} activeCity={activeCity} setActiveCity={setActiveCity} />} />
+					<Route path="/add" element={<AddCityPage setCities={setCities} setNotification={setNotification} cities={cities} />} />
 				</Routes>
 			</div>
 		</>

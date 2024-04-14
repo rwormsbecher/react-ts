@@ -1,5 +1,5 @@
 import React from "react";
-import { NotificationType } from "../models/Notification";
+import { NotificationType } from "../../models/Notification";
 
 interface NotificationComponentProps {
 	notification: NotificationType;

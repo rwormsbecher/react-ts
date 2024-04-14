@@ -1,7 +1,7 @@
 import React from "react";
-import { ListComponent } from "../components/ListComponent";
-import { ShowcaseComponent } from "../components/ShowcaseComponent";
-import { City } from "../models/City";
+import { ListComponent } from "../../components/listComponent/ListComponent";
+import { ShowcaseComponent } from "../../components/showcaseComponent/ShowcaseComponent";
+import { City } from "../../models/City";
 
 interface IHomePageProps {
 	setActiveCity: React.Dispatch<React.SetStateAction<City>>;

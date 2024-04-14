@@ -1,5 +1,5 @@
 import React from "react";
-import { City } from "../models/City";
+import { City } from "../../models/City";
 
 interface ListItemComponentProps {
 	city: City;

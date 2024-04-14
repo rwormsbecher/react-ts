@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
-import { City } from "../models/City";
-import { NotificationType } from "../models/Notification";
+import { City } from "../../models/City";
+import { NotificationType } from "../../models/Notification";
 
 interface FormValues {
 	title: string;
@@ -59,25 +59,13 @@ export const AddCityPage: React.FC<AddCityPageProps> = ({ setCities, setNotifica
 					<div>
 						<label htmlFor="title">Title:</label>
 						{errors.title && <p className="error">{errors.title.message}</p>}
-						<input
-							id="title"
-							type="text"
-							{...register("title")}
-							className={errors.title ? "error" : ""}
-							placeholder="title"
-						/>
+						<input id="title" type="text" {...register("title")} className={errors.title ? "error" : ""} placeholder="title" />
 					</div>
 
 					<div>
 						<label htmlFor="image">Image:</label>
 						{errors.image && <p className="error">{errors.image.message}</p>}
-						<input
-							id="image"
-							type="text"
-							{...register("image")}
-							className={errors.image ? "error" : ""}
-							placeholder="image"
-						/>
+						<input id="image" type="text" {...register("image")} className={errors.image ? "error" : ""} placeholder="image" />
 					</div>
 
 					<div>
